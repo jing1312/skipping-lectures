@@ -15,6 +15,6 @@
   <circle cx="140" cy="280" r="220" fill="#a78bfa" opacity="0.07"/>
   <text x="80" y="150" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="64" font-weight="700" fill="#ffffff">skipping-lectures</text>
   <rect x="84" y="172" width="520" height="6" rx="3" fill="url(#accent)"/>
-  <text x="82" y="225" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="30" fill="#cbd5e1">录播课 → AI 复习资料：转写文本 · 提炼重点 · 课件 PPT</text>
-  <text x="82" y="262" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" fill="#94a3b8">先转写，再提炼——不上课，也能备考。</text>
+  <text x="82" y="225" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="30" fill="#cbd5e1">把一学期的录播课，变成考前一天的复习提纲</text>
+  <text x="82" y="262" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" fill="#94a3b8">转写文本 · 提炼重点 · AI 课件 PPT · 讲稿 · 笔记</text>
 </svg>
