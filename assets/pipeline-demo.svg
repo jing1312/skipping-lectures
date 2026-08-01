@@ -1,55 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="480" viewBox="0 0 860 480" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="520" viewBox="0 0 880 520" font-family="PingFang SC, Microsoft YaHei, sans-serif">
   <defs>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1e4277"/>
       <stop offset="1" stop-color="#4a7bd6"/>
     </linearGradient>
   </defs>
-  <rect width="860" height="480" fill="#ffffff"/>
-  <text x="60" y="64" font-size="22" font-weight="700" fill="#1e2a44">两条路线，互不打架</text>
+  <rect width="880" height="520" fill="#ffffff"/>
+  <text x="60" y="62" font-size="22" font-weight="700" fill="#1e2a44">两条路线，互不打架</text>
   <text x="60" y="92" font-size="14" fill="#66708a">平台录播走「抽音频 → 转写」拿文本；网盘视频走「网盘 AI」拿 PPT / 讲稿 / 笔记。</text>
   <!-- 路线 A -->
-  <rect x="60" y="130" width="140" height="56" rx="12" fill="url(#accent)"/>
-  <text x="130" y="158" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">A 转写为主</text>
-  <text x="130" y="176" font-size="11" fill="#cfe0ff" text-anchor="middle">省空间</text>
+  <rect x="60" y="130" width="130" height="56" rx="12" fill="url(#accent)"/>
+  <text x="125" y="158" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">A 转写为主</text>
+  <text x="125" y="176" font-size="11" fill="#cfe0ff" text-anchor="middle">省空间</text>
   <g font-size="13" fill="#333b4d">
-    <rect x="220" y="130" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="272" y="158" text-anchor="middle">平台录播</text><text x="272" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">香樟云课堂</text>
-    <rect x="342" y="130" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="394" y="158" text-anchor="middle">抽音频</text><text x="394" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">&lt;100MB/节</text>
-    <rect x="464" y="130" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="516" y="158" text-anchor="middle">ASR 转写</text><text x="516" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">火山 · MiMo</text>
+    <rect x="210" y="130" width="110" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="265" y="158" text-anchor="middle">平台录播</text><text x="265" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">香樟云课堂</text>
+    <rect x="340" y="130" width="110" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="395" y="158" text-anchor="middle">抽音频</text><text x="395" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">&lt;100MB/节</text>
+    <rect x="470" y="130" width="110" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="525" y="158" text-anchor="middle">ASR 转写</text><text x="525" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">火山 · MiMo</text>
   </g>
+  <rect x="600" y="130" width="130" height="56" rx="12" fill="url(#accent)"/>
+  <text x="665" y="158" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">每节一份 txt</text>
+  <text x="665" y="175" font-size="10.5" fill="#cfe0ff" text-anchor="middle">带时间戳</text>
   <g stroke="#8a94a6" stroke-width="1.6" fill="none">
-    <path d="M 328 158 L 336 158"/>
-    <path d="M 450 158 L 458 158"/>
+    <path d="M 324 158 L 332 158"/>
+    <path d="M 454 158 L 462 158"/>
+    <path d="M 584 158 L 592 158"/>
   </g>
   <g fill="#8a94a6">
-    <path d="M 336 153 L 336 163 L 342 158 Z"/>
-    <path d="M 458 153 L 458 163 L 464 158 Z"/>
+    <path d="M 332 153 L 332 163 L 338 158 Z"/>
+    <path d="M 462 153 L 462 163 L 468 158 Z"/>
+    <path d="M 592 153 L 592 163 L 598 158 Z"/>
   </g>
   <!-- 路线 B -->
-  <rect x="60" y="250" width="140" height="56" rx="12" fill="url(#accent)"/>
-  <text x="130" y="278" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">B 网盘 AI</text>
-  <text x="130" y="296" font-size="11" fill="#cfe0ff" text-anchor="middle">不占本地</text>
+  <rect x="60" y="260" width="130" height="56" rx="12" fill="url(#accent)"/>
+  <text x="125" y="288" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">B 网盘 AI</text>
+  <text x="125" y="306" font-size="11" fill="#cfe0ff" text-anchor="middle">不占本地</text>
   <g font-size="13" fill="#333b4d">
-    <rect x="220" y="250" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="272" y="278" text-anchor="middle">网盘视频</text><text x="272" y="295" font-size="10.5" fill="#8a94a6" text-anchor="middle">本地可删</text>
-    <rect x="342" y="250" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="394" y="278" text-anchor="middle">批量触发</text><text x="394" y="295" font-size="10.5" fill="#8a94a6" text-anchor="middle">挂机跑批</text>
-    <rect x="464" y="250" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="516" y="278" text-anchor="middle">AI 课件 PPT</text><text x="516" y="295" font-size="10.5" fill="#8a94a6" text-anchor="middle">生成并导出</text>
+    <rect x="210" y="260" width="110" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="265" y="288" text-anchor="middle">网盘视频</text><text x="265" y="305" font-size="10.5" fill="#8a94a6" text-anchor="middle">本地可删</text>
+    <rect x="340" y="260" width="110" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="395" y="288" text-anchor="middle">批量触发</text><text x="395" y="305" font-size="10.5" fill="#8a94a6" text-anchor="middle">挂机跑批</text>
   </g>
+  <rect x="470" y="260" width="130" height="56" rx="12" fill="url(#accent)"/>
+  <text x="535" y="288" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">PPT · 讲稿 · 笔记</text>
+  <text x="535" y="305" font-size="10.5" fill="#cfe0ff" text-anchor="middle">全部导出</text>
   <g stroke="#8a94a6" stroke-width="1.6" fill="none">
-    <path d="M 328 278 L 336 278"/>
-    <path d="M 450 278 L 458 278"/>
+    <path d="M 324 288 L 332 288"/>
+    <path d="M 454 288 L 462 288"/>
   </g>
   <g fill="#8a94a6">
-    <path d="M 336 273 L 336 283 L 342 278 Z"/>
-    <path d="M 458 273 L 458 283 L 464 278 Z"/>
+    <path d="M 332 283 L 332 293 L 338 288 Z"/>
+    <path d="M 462 283 L 462 293 L 468 288 Z"/>
   </g>
-  <!-- 汇合：直落 -->
-  <circle cx="577" cy="186" r="4.5" fill="#2f5fb8"/>
-  <circle cx="333" cy="306" r="4.5" fill="#2f5fb8"/>
-  <path d="M 577 186 L 577 346" stroke="#2f5fb8" stroke-width="2.2" fill="none"/>
-  <path d="M 333 306 L 333 346" stroke="#2f5fb8" stroke-width="2.2" fill="none"/>
-  <path d="M 571 346 L 583 346 L 577 350 Z" fill="#2f5fb8"/>
-  <path d="M 327 346 L 339 346 L 333 350 Z" fill="#2f5fb8"/>
-  <rect x="150" y="350" width="560" height="88" rx="16" fill="url(#accent)"/>
-  <text x="430" y="394" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">考前一天的复习提纲</text>
-  <text x="430" y="420" font-size="13" fill="#cfe0ff" text-anchor="middle">txt 文本 · PPT · 讲稿 · 笔记 — 考前 1–2 天备好一门课</text>
+  <!-- 汇合弧线 -->
+  <path d="M 665 186 C 665 340, 600 360, 440 406" stroke="#2f5fb8" stroke-width="2.5" fill="none"/>
+  <path d="M 535 316 C 535 372, 455 372, 440 406" stroke="#2f5fb8" stroke-width="2.5" fill="none"/>
+  <path d="M 433 400 L 447 400 L 440 406 Z" fill="#2f5fb8"/>
+  <!-- 终点卡片 -->
+  <rect x="170" y="410" width="540" height="84" rx="16" fill="url(#accent)"/>
+  <text x="440" y="454" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">考前一天的复习提纲</text>
+  <text x="440" y="480" font-size="13" fill="#cfe0ff" text-anchor="middle">txt 文本 · PPT · 讲稿 · 笔记 — 考前 1–2 天备好一门课</text>
 </svg>
