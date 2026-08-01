@@ -24,9 +24,9 @@
   <!-- 左侧文案 -->
   <rect x="80" y="46" width="150" height="34" rx="17" fill="none" stroke="#38bdf8" stroke-opacity="0.55"/>
   <text x="155" y="69" font-size="14" font-weight="600" fill="#7fb9ff" text-anchor="middle" letter-spacing="2">AGENT SKILL</text>
-  <text x="80" y="138" font-size="58" font-weight="700" fill="#ffffff">一学期的所有课程</text>
-  <text x="80" y="200" font-size="58" font-weight="700" fill="url(#headline)">只要一天就能速成</text>
-  <text x="82" y="248" font-size="19" fill="#cfe0ff">平台录播 → 转写文本 → AI 课件 PPT · 讲稿 · 笔记，全程无人值守</text>
+  <text x="80" y="136" font-size="58" font-weight="700" fill="#ffffff">一学期的所有课程</text>
+  <text x="80" y="208" font-size="58" font-weight="700" fill="url(#headline)">只要一天就能速成</text>
+  <text x="82" y="252" font-size="19" fill="#cfe0ff">平台录播 → 转写文本 → AI 课件 PPT · 讲稿 · 笔记，全程无人值守</text>
   <!-- 右侧复习提纲卡片 -->
   <g transform="rotate(-4 940 150)" filter="url(#card-shadow)">
     <rect x="760" y="42" width="360" height="216" rx="18" fill="#ffffff"/>

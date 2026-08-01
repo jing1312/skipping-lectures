@@ -1,47 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="700" viewBox="0 0 860 700" font-family="PingFang SC, Microsoft YaHei, sans-serif">
   <rect width="860" height="700" fill="#e9edf4"/>
   <!-- 窗口 -->
-  <rect x="40" y="24" width="780" height="640" rx="16" fill="#ffffff" stroke="#dfe5ef"/>
-  <rect x="40" y="24" width="780" height="52" rx="16" fill="#f7f9fc"/>
-  <rect x="40" y="56" width="780" height="20" fill="#f7f9fc"/>
-  <circle cx="72" cy="50" r="7" fill="#ff5f57"/>
-  <circle cx="96" cy="50" r="7" fill="#febc2e"/>
-  <circle cx="120" cy="50" r="7" fill="#28c840"/>
-  <text x="430" y="55" font-size="14" fill="#8a94a6" text-anchor="middle">药物分析_2026-03-13 13 48 00.txt</text>
+  <rect x="40" y="30" width="780" height="640" rx="16" fill="#ffffff" stroke="#dfe5ef"/>
+  <rect x="40" y="30" width="780" height="52" rx="16" fill="#f7f9fc"/>
+  <rect x="40" y="62" width="780" height="20" fill="#f7f9fc"/>
+  <circle cx="72" cy="56" r="7" fill="#ff5f57"/>
+  <circle cx="96" cy="56" r="7" fill="#febc2e"/>
+  <circle cx="120" cy="56" r="7" fill="#28c840"/>
+  <text x="430" y="61" font-size="14" fill="#8a94a6" text-anchor="middle">药物分析_2026-03-13 13 48 00.txt</text>
   <!-- 文件树 -->
-  <rect x="40" y="76" width="260" height="588" fill="#fbfcfe"/>
-  <rect x="300" y="76" width="2" height="588" fill="#eef1f6"/>
-  <text x="60" y="112" font-size="13" fill="#8a94a6">transcripts/</text>
-  <text x="60" y="140" font-size="13" fill="#66708a">▸ 临床药理学/</text>
-  <text x="60" y="168" font-size="13" font-weight="600" fill="#1e2a44">▾ 药物分析/</text>
-  <rect x="70" y="184" width="214" height="22" rx="6" fill="#e8effc"/>
-  <text x="84" y="199" font-size="11" fill="#2f5fb8">药物分析_2026-03-13 13 48 00.txt</text>
-  <text x="84" y="227" font-size="11" fill="#66708a">药物分析_2026-03-20 10 28 00.txt</text>
-  <text x="84" y="249" font-size="11" fill="#66708a">药物分析_2026-03-27 09 38 00.txt</text>
-  <text x="60" y="279" font-size="13" fill="#66708a">▸ 天然药物化学/</text>
-  <text x="60" y="303" font-size="13" fill="#66708a">▸ 生物药剂与药物动力学/</text>
+  <rect x="40" y="82" width="260" height="588" fill="#fbfcfe"/>
+  <rect x="300" y="82" width="2" height="588" fill="#eef1f6"/>
+  <text x="60" y="118" font-size="13" fill="#8a94a6">transcripts/</text>
+  <text x="60" y="146" font-size="13" fill="#66708a">▸ 临床药理学/</text>
+  <text x="60" y="174" font-size="13" font-weight="600" fill="#1e2a44">▾ 药物分析/</text>
+  <rect x="70" y="188" width="214" height="22" rx="6" fill="#e8effc"/>
+  <text x="84" y="203" font-size="11" fill="#2f5fb8">药物分析_2026-03-13 13 48 00.txt</text>
+  <text x="84" y="229" font-size="11" fill="#66708a">药物分析_2026-03-20 10 28 00.txt</text>
+  <text x="84" y="255" font-size="11" fill="#66708a">药物分析_2026-03-27 09 38 00.txt</text>
+  <text x="60" y="285" font-size="13" fill="#66708a">▸ 天然药物化学/</text>
+  <text x="60" y="311" font-size="13" fill="#66708a">▸ 生物药剂与药物动力学/</text>
   <!-- 转写正文 -->
-  <text x="330" y="118" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 药物分析_2026-03-13 13 48 00</text>
-  <text x="330" y="146" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 课程: 药物分析</text>
-  <text x="330" y="174" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 转写时间: 2026-06-03 19:50:01.183952</text>
-  <text x="330" y="202" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 模型: mimo-v2.5</text>
-  <text x="330" y="230" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 方式: 分段转写(5.0分钟/段)</text>
-  <rect x="330" y="252" width="470" height="1" fill="#eef1f6"/>
-  <rect x="330" y="274" width="62" height="22" rx="11" fill="#e8effc"/>
-  <text x="361" y="290" font-size="12.5" font-weight="700" fill="#2f5fb8" text-anchor="middle">02:30</text>
-  <text x="406" y="290" font-size="14" fill="#333b4d">好了，把你们的手机收起来啊。那个，还有，关于那个残留溶剂</text>
-  <text x="406" y="314" font-size="14" fill="#333b4d">的问题啊。它里面有一个特点。就是它分为……首先……首先</text>
-  <text x="406" y="338" font-size="14" fill="#333b4d">是这个残留溶剂的……那么残留溶剂呢，它其实是在原料、辅料</text>
-  <text x="406" y="362" font-size="14" fill="#333b4d">以及制剂的生产过程中，引入的一个溶剂，或者是本身有的溶剂</text>
-  <text x="406" y="386" font-size="14" fill="#333b4d">它是不能够被完全去除的……</text>
-  <rect x="330" y="410" width="62" height="22" rx="11" fill="#e8effc"/>
-  <text x="361" y="426" font-size="12.5" font-weight="700" fill="#2f5fb8" text-anchor="middle">03:08</text>
-  <text x="406" y="426" font-size="14" fill="#333b4d">有机溶剂呢，按照中国药典以及 ICH 的指导原则来划分，在</text>
-  <text x="406" y="450" font-size="14" fill="#333b4d">我们国家限度是有明确的分类的。怎么分类呢？分为两类。那么</text>
-  <text x="406" y="474" font-size="14" fill="#333b4d">第一类呢，是毒性比较大的……</text>
+  <text x="330" y="120" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 药物分析_2026-03-13 13 48 00</text>
+  <text x="330" y="148" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 课程: 药物分析</text>
+  <text x="330" y="176" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 转写时间: 2026-06-03 19:50:01.183952</text>
+  <text x="330" y="204" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 模型: mimo-v2.5</text>
+  <text x="330" y="232" font-size="14" fill="#8a94a6" font-family="Consolas, monospace"># 方式: 分段转写(5.0分钟/段)</text>
+  <rect x="330" y="254" width="470" height="1" fill="#eef1f6"/>
+  <rect x="330" y="278" width="62" height="22" rx="11" fill="#e8effc"/>
+  <text x="361" y="294" font-size="12.5" font-weight="700" fill="#2f5fb8" text-anchor="middle">02:30</text>
+  <text x="406" y="292" font-size="14" fill="#333b4d">好了，把你们的手机收起来啊。那个，还有，关于那个残留溶剂</text>
+  <text x="406" y="318" font-size="14" fill="#333b4d">的问题啊。它里面有一个特点。就是它分为……首先……首先</text>
+  <text x="406" y="344" font-size="14" fill="#333b4d">是这个残留溶剂的……那么残留溶剂呢，它其实是在原料、辅料</text>
+  <text x="406" y="370" font-size="14" fill="#333b4d">以及制剂的生产过程中，引入的一个溶剂，或者是本身有的溶剂</text>
+  <text x="406" y="396" font-size="14" fill="#333b4d">它是不能够被完全去除的……</text>
+  <rect x="330" y="424" width="62" height="22" rx="11" fill="#e8effc"/>
+  <text x="361" y="440" font-size="12.5" font-weight="700" fill="#2f5fb8" text-anchor="middle">03:08</text>
+  <text x="406" y="438" font-size="14" fill="#333b4d">有机溶剂呢，按照中国药典以及 ICH 的指导原则来划分，在</text>
+  <text x="406" y="464" font-size="14" fill="#333b4d">我们国家限度是有明确的分类的。怎么分类呢？分为两类。那么</text>
+  <text x="406" y="490" font-size="14" fill="#333b4d">第一类呢，是毒性比较大的……</text>
   <!-- 底部提示 -->
-  <rect x="330" y="502" width="470" height="72" rx="10" fill="#f2f4f9"/>
-  <text x="350" y="528" font-size="13.5" font-weight="600" fill="#1e2a44">每节课一份，带时间戳的逐字转写</text>
-  <text x="350" y="550" font-size="13" fill="#66708a">复习时 Ctrl+F 搜关键词，几秒定位老师强调的内容</text>
-  <text x="350" y="570" font-size="13" fill="#66708a">合并后丢给任意 LLM，提炼重点 / 生成复习提纲</text>
+  <rect x="330" y="522" width="470" height="100" rx="10" fill="#f2f4f9"/>
+  <text x="350" y="548" font-size="13.5" font-weight="600" fill="#1e2a44">每节课一份，带时间戳的逐字转写</text>
+  <text x="350" y="572" font-size="13" fill="#66708a">复习时 Ctrl+F 搜关键词，几秒定位老师强调的内容</text>
+  <text x="350" y="596" font-size="13" fill="#66708a">合并后丢给任意 LLM，提炼重点 / 生成复习提纲</text>
 </svg>
