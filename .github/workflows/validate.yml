@@ -31,7 +31,7 @@ jobs:
       - name: Test Bash installer
         shell: bash
         run: |
-          destination="$RUNNER_TEMP/skipping-skills"
+          destination="$RUNNER_TEMP/skipping-skills-bash"
           bash scripts/install.sh --target custom --destination "$destination"
           test -f "$destination/skipping-lectures/SKILL.md"
           test -f "$destination/skipping-lectures/references/route-index.md"
@@ -39,7 +39,7 @@ jobs:
       - name: Test PowerShell installer
         shell: pwsh
         run: |
-          $destination = Join-Path $env:RUNNER_TEMP "skipping-skills"
+          $destination = Join-Path $env:RUNNER_TEMP "skipping-skills-pwsh"
           ./scripts/install.ps1 -Target custom -Destination $destination
           if (-not (Test-Path (Join-Path $destination "skipping-lectures/SKILL.md"))) {
             throw "first install missing SKILL.md"
