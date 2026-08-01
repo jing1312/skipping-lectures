@@ -17,18 +17,13 @@
     <rect x="342" y="130" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="394" y="158" text-anchor="middle">抽音频</text><text x="394" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">&lt;100MB/节</text>
     <rect x="464" y="130" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="516" y="158" text-anchor="middle">ASR 转写</text><text x="516" y="175" font-size="10.5" fill="#8a94a6" text-anchor="middle">火山 · MiMo</text>
   </g>
-  <rect x="586" y="130" width="110" height="56" rx="12" fill="url(#accent)"/>
-  <text x="641" y="158" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">每节一份 txt</text>
-  <text x="641" y="175" font-size="10.5" fill="#cfe0ff" text-anchor="middle">带时间戳</text>
   <g stroke="#8a94a6" stroke-width="1.6" fill="none">
     <path d="M 328 158 L 336 158"/>
     <path d="M 450 158 L 458 158"/>
-    <path d="M 572 158 L 580 158"/>
   </g>
   <g fill="#8a94a6">
     <path d="M 336 153 L 336 163 L 342 158 Z"/>
     <path d="M 458 153 L 458 163 L 464 158 Z"/>
-    <path d="M 580 153 L 580 163 L 586 158 Z"/>
   </g>
   <!-- 路线 B -->
   <rect x="60" y="250" width="140" height="56" rx="12" fill="url(#accent)"/>
@@ -39,27 +34,20 @@
     <rect x="342" y="250" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="394" y="278" text-anchor="middle">批量触发</text><text x="394" y="295" font-size="10.5" fill="#8a94a6" text-anchor="middle">挂机跑批</text>
     <rect x="464" y="250" width="104" height="56" rx="12" fill="#ffffff" stroke="#dfe5ef"/><text x="516" y="278" text-anchor="middle">AI 课件 PPT</text><text x="516" y="295" font-size="10.5" fill="#8a94a6" text-anchor="middle">生成并导出</text>
   </g>
-  <rect x="586" y="250" width="130" height="56" rx="12" fill="url(#accent)"/>
-  <text x="651" y="278" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">PPT · 讲稿 · 笔记</text>
-  <text x="651" y="295" font-size="10.5" fill="#cfe0ff" text-anchor="middle">全部导出</text>
   <g stroke="#8a94a6" stroke-width="1.6" fill="none">
     <path d="M 328 278 L 336 278"/>
     <path d="M 450 278 L 458 278"/>
-    <path d="M 572 278 L 580 278"/>
   </g>
   <g fill="#8a94a6">
     <path d="M 336 273 L 336 283 L 342 278 Z"/>
     <path d="M 458 273 L 458 283 L 464 278 Z"/>
-    <path d="M 580 273 L 580 283 L 586 278 Z"/>
   </g>
-  <!-- 汇合 -->
-  <circle cx="641" cy="186" r="4.5" fill="#2f5fb8"/>
-  <circle cx="651" cy="296" r="4.5" fill="#2f5fb8"/>
-  <g stroke="#2f5fb8" stroke-width="2.2" fill="none">
-    <path d="M 641 186 L 641 208 C 641 214 455 214 455 220 L 455 346"/>
-    <path d="M 651 296 L 651 316 C 651 322 333 322 333 328 L 333 346"/>
-  </g>
-  <path d="M 449 346 L 461 346 L 455 350 Z" fill="#2f5fb8"/>
+  <!-- 汇合：直落 -->
+  <circle cx="577" cy="186" r="4.5" fill="#2f5fb8"/>
+  <circle cx="333" cy="306" r="4.5" fill="#2f5fb8"/>
+  <path d="M 577 186 L 577 346" stroke="#2f5fb8" stroke-width="2.2" fill="none"/>
+  <path d="M 333 306 L 333 346" stroke="#2f5fb8" stroke-width="2.2" fill="none"/>
+  <path d="M 571 346 L 583 346 L 577 350 Z" fill="#2f5fb8"/>
   <path d="M 327 346 L 339 346 L 333 350 Z" fill="#2f5fb8"/>
   <rect x="150" y="350" width="560" height="88" rx="16" fill="url(#accent)"/>
   <text x="430" y="394" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">考前一天的复习提纲</text>
