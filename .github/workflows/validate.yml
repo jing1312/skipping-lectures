@@ -34,7 +34,7 @@ jobs:
           destination="$RUNNER_TEMP/skipping-skills-bash"
           bash scripts/install.sh --target custom --destination "$destination"
           test -f "$destination/skipping-lectures/SKILL.md"
-          test -f "$destination/skipping-lectures/references/route-index.md"
+          test -f "$destination/skipping-lectures/references/troubleshooting.md"
 
       - name: Test PowerShell installer
         shell: pwsh
