@@ -3,9 +3,9 @@
 把录播课视频变成可复习的 AI 资料（转写文本 / 提炼重点 / AI 课件 PPT / 讲稿 / 笔记），
 让你不上课也能备考。
 
-这是一个 **Claude Code / opencode 等 AI 编程工具的 skill**（编排层）：实际干活的是
-两个配套工具仓库，本 skill 负责判断走哪条路线、给出正确命令、复用两边共享知识
-（CDP 登录态等）。
+这是一个 **Claude Code / opencode / Codex 等 AI 编程工具的 skill**（编排层）：
+实际干活的是两个配套工具仓库，本 skill 负责判断走哪条路线、给出正确命令、
+复用两边共享知识（CDP 登录态等）。
 
 - **路线 A（转写为主）**：[xiangzhang-course-pipeline](https://github.com/jing1312/xiangzhang-course-pipeline)
   学校教学平台（香樟云课堂 zbkt.ncu.edu.cn 等）课程实录 → 直链 → 抽音频（不下载视频）
@@ -15,21 +15,43 @@
 
 两条路线不互斥：文本和 PPT/笔记可以都做。
 
-## 安装
+## 目录结构
 
-把本仓库放到 AI 编程工具的全局 skills 目录：
-
-```powershell
-# Windows（示例）：
-git clone https://github.com/jing1312/skipping-lectures.git `
-  "$env:USERPROFILE\.agents\skills\skipping-lectures"
-
-# macOS / Linux：
-git clone https://github.com/jing1312/skipping-lectures.git ~/.agents/skills/skipping-lectures
+```
+skipping-lectures/
+├── skills/
+│   └── skipping-lectures/       # skill 本体
+│       ├── SKILL.md             # 触发描述 + 强制工作流 + 安全策略
+│       └── references/          # 按需加载的 playbook（索引路由）
+│           ├── route-index.md         # 路由表：场景 → playbook
+│           ├── route-a-transcribe.md  # 路线 A：平台录播 → 转写
+│           ├── route-b-pan-export.md  # 路线 B：网盘 AI 产出
+│           ├── cdp-login.md          # 调试浏览器（CDP）登录态
+│           └── troubleshooting.md    # 排障
+├── scripts/
+│   ├── install.ps1              # Windows 一键安装（多 agent 目标、备份回滚）
+│   └── install.sh               # macOS/Linux 一键安装
+├── tests/
+│   └── validate_skill.py        # 结构/安全校验（CI 自动跑）
+└── .github/workflows/validate.yml
 ```
 
-> 不同工具的技能目录不同（如 Claude Code 是 `~/.claude/skills/`），放对目录后
-> 重启会话即可触发。
+## 安装
+
+```powershell
+# Windows（默认装到 opencode/agents 全局目录）：
+powershell -ExecutionPolicy Bypass -File scripts/install.ps1
+
+# 其他目标：-Target claude / -Target codex / -Target custom -Destination <目录>
+# 覆盖已安装版本：-Force（旧版本自动备份）
+
+# macOS / Linux：
+bash scripts/install.sh            # 默认 ~/.agents/skills
+bash scripts/install.sh --target claude --force
+```
+
+> 手动安装也简单：把 `skills/skipping-lectures/` 目录复制到你的 agent 的
+> skills 目录（如 `~/.agents/skills/`、`~/.claude/skills/`），重启会话即可触发。
 
 ## 用法
 
@@ -40,10 +62,18 @@ git clone https://github.com/jing1312/skipping-lectures.git ~/.agents/skills/ski
 - "AI 提炼这门课的重点"
 - "复习备考资料整理"
 
-skill 会先问清视频在哪、要什么产出，然后按固定协议执行：
-**澄清需求 → 环境检查 → 分步执行 → 收尾汇报**。
+skill 会先问清视频在哪、要什么产出，然后按强制工作流执行：
+**确认目标 → 路由 playbook → 环境检查 → 计划与执行 → 验证 → 收尾汇报**。
+细节见 [SKILL.md](skills/skipping-lectures/SKILL.md)。
 
-详细流程见 [SKILL.md](SKILL.md)，命令速查见 [references/workflow-cheatsheet.md](references/workflow-cheatsheet.md)。
+## 校验
+
+```bash
+python tests/validate_skill.py
+```
+
+检查：frontmatter 完整性、description 长度、references 索引一致性、
+密钥泄露、危险 shell 管道、TODO 占位符。GitHub Actions 在每次 push 自动运行。
 
 ## 依赖
 

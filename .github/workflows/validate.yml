@@ -1,0 +1,46 @@
+name: Validate Skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-latest
+    env:
+      PYTHONUTF8: "1"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Skill
+        run: python tests/validate_skill.py
+
+      - name: Test Bash installer
+        shell: bash
+        run: |
+          destination="$RUNNER_TEMP/skipping-skills"
+          ./scripts/install.sh --target custom --destination "$destination"
+          test -f "$destination/skipping-lectures/SKILL.md"
+          test -f "$destination/skipping-lectures/references/route-index.md"
+
+      - name: Test PowerShell installer
+        shell: pwsh
+        run: |
+          $destination = Join-Path $env:RUNNER_TEMP "skipping-skills"
+          ./scripts/install.ps1 -Target custom -Destination $destination
+          if (-not (Test-Path (Join-Path $destination "skipping-lectures/SKILL.md"))) {
+            throw "first install missing SKILL.md"
+          }
