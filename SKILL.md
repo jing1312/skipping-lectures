@@ -1,7 +1,7 @@
 ---
 name: skipping-lectures
 description: >-
-  Turn recorded lecture videos into study-ready material (AI-generated notes, key points, transcripts, PPTs) so the user can skip live classes and still ace exams. Trigger whenever the user mentions 录播课/课程录播/网课视频/不想上课/翘课/划水、把视频转成笔记、AI 提炼课程重点、导出课件 PPT/讲稿/笔记、批量转写课程语音、复习备考资料整理、或 asks to process videos from a school platform (zbkt.ncu.edu.cn 香樟云课堂 etc.) or from Baidu Pan (百度网盘) with pan-AI batch export. Use this skill even if the user only mentions one half of the workflow (e.g. only 转写 or only 网盘 AI 导出) — route them to the right half. Do NOT use for generic note-taking, general video editing, or unrelated ASR tasks.
+  Turn recorded lecture videos into study-ready material: AI transcripts, key points, courseware PPTs, lecture notes — so the user can skip live classes and still ace exams. Trigger on 录播课/网课/课程回放/不想上课/翘课、把视频转成笔记或文本、AI 提炼课程重点、导出课件 PPT/讲稿/笔记、批量转写课程语音、复习/备考资料整理, or when videos need processing from a school platform (zbkt.ncu.edu.cn 香樟云课堂) or from Baidu Pan (百度网盘) via pan-AI batch export. Use even if only one half of the workflow is mentioned (转写 or 网盘 AI 导出) — route to the right half. Not for generic note-taking or unrelated video editing/ASR.
 ---
 
 # skipping-lectures — 录播课 → AI 复习资料流水线
@@ -34,8 +34,26 @@ description: >-
   百度网盘里视频的 AI 课件/讲稿/笔记**批量**生成与导出（服务端按需生成，无批量入口，
   必须逐节触发）。含 Node 版与油猴版。
 
-安装：两仓库都 `git clone` 到本地（公开仓库，无密钥）。密钥走环境变量/本机
-`config.json`（已 gitignore），**绝不把密钥写进仓库或提交**。
+安装：两仓库都 `git clone` 到本地（公开仓库，无密钥）。密钥走环境变量或本机
+`config.json`（已 gitignore）——仓库是公开的，密钥一旦提交等于直接泄露，
+**绝不把密钥写进仓库或提交**。
+
+## 触发后的执行顺序（固定协议）
+
+1. **澄清需求**（一两个问题内搞定）：视频现在在哪（平台没下/已下载/在网盘）、
+   想要什么产出（文本/PPT/讲稿/笔记/都要）。照「核心判断」选路线，两路线可并行。
+2. **环境检查**：
+   - 两个仓库是否已在本地？常见位置：`D:\文档\学业资料\1大三\ai_test\` 下与仓库同名
+     的目录；找不到就 `git clone` 或问用户位置
+   - 调试浏览器是否开着：`curl http://127.0.0.1:9222/json/version` 能通说明 CDP 就绪；
+     没开就先启动（命令见下）并请用户登录平台/网盘
+   - `config.json` 是否已从 `config.example.json` 复制并填好 `courses`/`videoFolder`
+3. **分步执行**：每步开跑前用一句话告诉用户"现在做 X（第 N 步 / 共 M 步）"，
+   别一次把全部命令砸给用户；长步骤（ASR 转写、网盘 AI 导出）说明预期耗时，
+   转写中的中间产物（wav/清单）可顺手汇报。
+4. **收尾汇报**：产物在哪（`transcripts/<课程>/`、`output/`、网盘视频目录的 PPT）、
+   成功/失败数量、失败项的下一步（重跑或手动）；文本类产物提示用户可丢给任意
+   LLM 提问/总结，或按课程合并后提炼重点（一页纸复习）。
 
 ## 共享前置：调试浏览器（CDP）
 
@@ -47,7 +65,8 @@ msedge --remote-debugging-port=9222 --user-data-dir=%LOCALAPPDATA%\edge-debug-pr
 
 - 用独立 user-data-dir（与日常浏览器分开），启动后在浏览器里登录平台/网盘，保持开着
 - 脚本跑批时**新建标签页**干活，不影响用户正常上网
-- 端口默认 9222，两仓库都支持 `--cdp` / `cdp.port` 配置
+- pipeline 的 01_links 脚本用 `--cdp` flag 连调试浏览器（端口走 config 的 `cdp.port`）；
+  baidu-ai-batch 没有 flag，直接读 config 的 `host`/`port`（默认 `127.0.0.1:9222`）
 
 ## 路线 A：平台录播 → 转写文本
 

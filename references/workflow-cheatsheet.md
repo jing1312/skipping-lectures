@@ -38,6 +38,11 @@ python 03_asr/batch_transcribe.py --csv media_urls/all_fresh_media_urls.csv --ou
 #    或吃本地音频：--dir transcripts/audio/临床药理学
 #    输出 transcripts/<课程>/<课程名>_<时间>.txt（含 [mm:ss] 分句）
 
+# 5b. MiMo 备选（单次 ≤7MB/20 分钟，超长自动切片）
+export MIMO_API_KEY=...
+python 03_asr/mimo_asr_batch.py --csv media_urls/all_fresh_media_urls.csv --out transcripts_mimo
+#    或吃本地音频：--dir transcripts/audio/临床药理学
+
 # 可选：要本地视频副本时
 python 02_download/download_videos.py --csv media_urls/all_fresh_media_urls.csv --out downloads
 python 02_download/rename_videos.py --dir downloads --csv media_urls/all_fresh_media_urls.csv
