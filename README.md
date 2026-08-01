@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="assets/skipping-lectures-cover.svg" alt="skipping-lectures：把一学期的录播课变成考前一天的复习提纲" width="100%" />
+  <img src="assets/skipping-lectures-cover.svg" alt="skipping-lectures：一学期的所有课程，只要一天就能速成" width="100%" />
 </div>
 
 <div align="center">
 
 # 🎓 skipping-lectures
 
-### 把一学期的录播课，变成考前一天的复习提纲。
+### 一学期的所有课程，只要一天就能速成。
 
 一个可安装到 opencode、Claude Code、Codex 等 Agent 的录播课学习流水线 Skill——
 平台录播转文本，网盘视频出 PPT，全程无人值守。
