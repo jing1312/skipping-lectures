@@ -9,13 +9,10 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = REPO_ROOT / "skills" / "skipping-lectures"
+SKILL_DIR = REPO_ROOT
 REFERENCES_DIR = SKILL_DIR / "references"
 EXPECTED_PLAYBOOKS = {
-    "route-index.md",
-    "route-a-transcribe.md",
-    "route-b-pan-export.md",
-    "cdp-login.md",
+    "platform-internals.md",
     "troubleshooting.md",
 }
 REQUIRED_SKILL_FIELDS = {"name", "description"}
@@ -33,7 +30,6 @@ SECRET_PATTERNS = {
 REMOTE_SHELL_EXECUTION = re.compile(
     r"(?im)^\s*(?:curl|wget|irm|iwr|Invoke-WebRequest)\b[^\r\n]*\|\s*(?:bash|sh|pwsh|powershell|iex)\b"
 )
-INDEX_ROW = re.compile(r"(?m)^\|\s*`([^`]+)`\s*\|.*?\]\(([^)\s]+)\)\s*\|")
 
 
 def parse_frontmatter(text: str) -> dict | None:
@@ -82,11 +78,6 @@ def main() -> int:
         errors.append(
             f"references: file set mismatch. missing={sorted(EXPECTED_PLAYBOOKS - files)} extra={sorted(files - EXPECTED_PLAYBOOKS)}"
         )
-
-    index_text = (REFERENCES_DIR / "route-index.md").read_text(encoding="utf-8")
-    index_files = {m.group(2).split("/")[-1] for m in INDEX_ROW.finditer(index_text)}
-    for f in sorted(index_files - files):
-        errors.append(f"route-index.md: links to missing file {f}")
 
     test_prompts = SKILL_DIR / "test-prompts.json"
     if not test_prompts.is_file():

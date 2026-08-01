@@ -3,7 +3,7 @@ set -euo pipefail
 
 SKILL_NAME="skipping-lectures"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SOURCE_DIR="$REPO_ROOT/skills/$SKILL_NAME"
+SOURCE_DIR="$REPO_ROOT"
 
 usage() {
   cat <<EOF

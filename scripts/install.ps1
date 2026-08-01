@@ -81,7 +81,7 @@ function Copy-SkillToStage {
     }
 }
 
-$sourcePath = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot "..\skills\$SkillName"))
+$sourcePath = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
 if (-not (Test-Path -LiteralPath (Join-Path $sourcePath "SKILL.md") -PathType Leaf)) {
     throw "找不到 Skill 源目录: $sourcePath"
 }

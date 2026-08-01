@@ -102,8 +102,7 @@ macOS / Linux：
 
 <details>
 <summary>方式三：手动复制</summary>
-
-把 [`skills/skipping-lectures`](skills/skipping-lectures) 整个目录复制到 Agent 的 Skills 根目录：
+把仓库根目录（`SKILL.md`、`references/`、`test-prompts.json`）复制到 Agent 的 Skills 根目录：
 
 ```text
 ~/.agents/skills/skipping-lectures/
@@ -111,7 +110,7 @@ macOS / Linux：
 ~/.codex/skills/skipping-lectures/
 ```
 
-必须保留 `SKILL.md` 和 `references/`，不要只复制某一个文件。重启会话即可触发。
+必须保留 `SKILL.md`、`references/` 和 `test-prompts.json`，不要只复制某一个文件。重启会话即可触发。
 
 </details>
 
@@ -157,15 +156,12 @@ macOS / Linux：
 <summary>点击展开</summary>
 
 ```text
-skills/skipping-lectures/
-├── SKILL.md                 # 触发描述 + 强制工作流 + 安全策略
+仓库根 = skill 本体
+├── SKILL.md                 # 触发描述 + 工作流 + 两条路线 + 安全策略
 ├── test-prompts.json        # 3 个真实场景回归测试
-└── references/              # 按需加载的 Playbook（索引路由）
-    ├── route-index.md       # 路由表：场景 → playbook
-    ├── route-a-transcribe.md
-    ├── route-b-pan-export.md
-    ├── cdp-login.md
-    └── troubleshooting.md
+└── references/              # 按需读取的细节
+    ├── troubleshooting.md   # 排障表（出问题时读）
+    └── platform-internals.md # 平台接口要点（适配/改版时读）
 assets/
 └── skipping-lectures-cover.svg  # README 封面图
 scripts/
