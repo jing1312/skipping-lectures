@@ -59,6 +59,10 @@
 它其实是在原料、辅料以及制剂的生产过程中，引入的一个溶剂，或者是本身有的溶剂……
 ```
 
+在编辑器里打开就是这样，时间戳跟着内容走：
+
+<img src="assets/transcript-demo.svg" alt="转写文本在编辑器中的效果" width="620"/>
+
 文件按课程自动归档：
 
 ```text
@@ -89,6 +93,8 @@ transcripts/
 |---|---|---|
 | **A 转写为主** | 教学平台（香樟云课堂 zbkt.ncu.edu.cn 等）课程实录 → 列表 → 直链 → 抽音频 → 火山/MiMo ASR | 每节课一份带时间戳的 txt |
 | **B 网盘 AI 产出** | 百度网盘视频 → AI 课件/讲稿/笔记批量生成与导出（Node 版 + 油猴版） | PPT（存网盘）、讲稿/笔记（本地 TXT） |
+
+<img src="assets/pipeline-demo.svg" alt="两条路线的工作流示意图" width="620"/>
 
 ## ⚡ 快速开始
 
@@ -204,7 +210,9 @@ macOS / Linux：
     ├── troubleshooting.md   # 排障表（出问题时读）
     └── platform-internals.md # 平台接口要点（适配/改版时读）
 assets/
-└── skipping-lectures-cover.svg  # README 封面图
+├── skipping-lectures-cover.svg   # README 封面图
+├── transcript-demo.svg           # 产物预览（转写文本示意）
+└── pipeline-demo.svg             # 两条路线工作流示意图
 scripts/
 ├── install.ps1              # Windows 安装器
 └── install.sh               # macOS/Linux 安装器
