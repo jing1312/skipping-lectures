@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -32,7 +32,7 @@ jobs:
         shell: bash
         run: |
           destination="$RUNNER_TEMP/skipping-skills"
-          ./scripts/install.sh --target custom --destination "$destination"
+          bash scripts/install.sh --target custom --destination "$destination"
           test -f "$destination/skipping-lectures/SKILL.md"
           test -f "$destination/skipping-lectures/references/route-index.md"
 
