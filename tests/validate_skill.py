@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import re
 import sys
+import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -86,6 +87,20 @@ def main() -> int:
     index_files = {m.group(2).split("/")[-1] for m in INDEX_ROW.finditer(index_text)}
     for f in sorted(index_files - files):
         errors.append(f"route-index.md: links to missing file {f}")
+
+    test_prompts = SKILL_DIR / "test-prompts.json"
+    if not test_prompts.is_file():
+        errors.append("test-prompts.json: missing")
+    else:
+        try:
+            prompts = json.loads(test_prompts.read_text(encoding="utf-8"))
+            if not isinstance(prompts, list) or len(prompts) < 2:
+                errors.append("test-prompts.json: must be a list of at least 2 prompts")
+            for p in prompts:
+                if not {"id", "prompt", "expected"} <= set(p):
+                    errors.append("test-prompts.json: every entry needs id/prompt/expected")
+        except json.JSONDecodeError as e:
+            errors.append(f"test-prompts.json: invalid JSON ({e})")
 
     for p in sorted(REFERENCES_DIR.glob("*.md")):
         text = p.read_text(encoding="utf-8")

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "prompt": "把「临床药理学」的课程录播整理一下，每节课一份转写文本，视频还在学校平台上。",
+    "expected": "识别为路线 A；检查环境（仓库/CDP/config）；给出 collect_course_items → collect_media_details → export_fresh_media_urls → extract_audio → batch_transcribe 的完整命令与预期产物路径；分步汇报。"
+  },
+  {
+    "id": 2,
+    "prompt": "帮我把网盘里这学期的课批量导 PPT，顺便把讲稿存到本地。",
+    "expected": "识别为路线 B；检查 baidu-ai-batch 仓库与 config.videoFolder；串行执行 export-ppt 和 extract-manuscript；说明 PPT 存网盘、讲稿在 output/；提醒限流不要并发。"
+  },
+  {
+    "id": 3,
+    "prompt": "抽音频报 401，帮我继续搞，别从头跑。",
+    "expected": "识别为直链过期（troubleshooting）；给出 rebuild_fresh_manifest.cjs 刷新后重导 CSV；说明断点续传机制（extract_audio 跳过已存在 >1KB 的文件），不重新采集课程列表。"
+  }
+]

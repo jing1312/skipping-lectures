@@ -178,7 +178,12 @@ tests/validate_skill.py      # 无第三方依赖的仓库验证器
 python tests\validate_skill.py
 ```
 
-验证器会检查 Skill frontmatter、description 长度、references 索引一致性、占位符、疑似凭据和危险 shell 管道。GitHub Actions 在每次 push 自动重复验证，并测试安装器的首次安装、拒绝覆盖、备份和强制更新路径。
+验证器会检查 Skill frontmatter、description 长度、references 索引一致性、test-prompts.json
+合法性、占位符、疑似凭据和危险 shell 管道。GitHub Actions 在每次 push 自动重复验证，
+并测试安装器的首次安装、拒绝覆盖、备份和强制更新路径。
+
+Skill 自带 [`test-prompts.json`](skills/skipping-lectures/test-prompts.json)（3 个真实
+用户场景），修改后可用它做回归验证：让 Agent 按 prompt 执行，检查是否命中预期流程。
 
 ## ❓ 常见问题
 
